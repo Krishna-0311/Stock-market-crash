@@ -1,44 +1,11 @@
 # Detecting Stock Market Crashes with Topological Data Analysis
-
-## What is it?
-A demo on how to build a simple topological detector to analyse stock market crashes. To learn more, have a look at our [blog post](https://towardsdatascience.com/detecting-stock-market-crashes-with-topological-data-analysis-7d5dd98abe42).
-
-## Getting started
-
-Spin up a virtual environment and install the required libraries:
+ its using the time line series
+ ![crash_comparison](https://user-images.githubusercontent.com/90108144/205336601-807965fe-63f3-44ec-bfde-e0f89a4b4810.png)
 
 ```
-virtualenv -p python3.7 env
-pip install -r requirements.txt
-```
+![crash_First Derivative](https://user-images.githubusercontent.com/90108144/205336619-81e7fcbf-2c96-4cbe-8f70-40813a477b57.png)
 
-To make plotly play nice with JupyterLab one needs to also run
 
-```
-# Avoid "JavaScript heap out of memory" errors during extension installation
-# (OS X/Linux)
-export NODE_OPTIONS=--max-old-space-size=4096
-# (Windows)
-set NODE_OPTIONS=--max-old-space-size=4096
-
-# Jupyter widgets extension
-jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.0 --no-build
-
-# FigureWidget support
-jupyter labextension install plotlywidget@1.2.0 --no-build
-
-# and jupyterlab renderer support
-jupyter labextension install jupyterlab-plotly@1.2.0 --no-build
-
-# JupyterLab chart editor support (optional)
-jupyter labextension install jupyterlab-chart-editor@1.2 --no-build
-
-# Build extensions (must be done to activate extensions since --no-build is used above)
-jupyter lab build
-
-# Unset NODE_OPTIONS environment variable
-# (OS X/Linux)
-unset NODE_OPTIONS
-# (Windows)
-set NODE_OPTIONS=
-```
+![crash_Landscape Distance](https://user-images.githubusercontent.com/90108144/205336629-327a8769-f967-4af7-9612-404b6ddcd7a7.png)
+![metric_first_derivative](https://user-images.githubusercontent.com/90108144/205336633-a501fcb1-90d4-487a-ace1-44d9f06fd4ca.png)
+![metric_landscape_betti](https://user-images.githubusercontent.com/90108144/205336646-2c38f51c-2848-4165-b6dc-b702252a9cc6.png)
